@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>FA Insumos & Servicios</title>
+    <title>FA Insumos & Servicios | Reparación y Venta de Tecnología</title>
 
     <link rel="icon" type="image/png" href="LOGO-FA.png" />
 
     <meta
       name="description"
-      content="Servicio técnico integral de computadoras, notebooks, celulares e impresoras en Albardón, San Juan. Diagnóstico honesto, reparación rápida y venta de insumos."
+      content="Servicio técnico de computadoras, celulares, TV e impresoras en Albardón, San Juan. Venta de insumos de impresión (tintas, tóners) y productos de computación (periféricos, hardware)."
     />
     <meta
       name="keywords"
-      content="reparación de pc san juan, servicio técnico computadoras albardón, arreglo de notebooks san juan, insumos informáticos san juan, arreglo celulares albardón, mantenimiento redes"
+      content="venta de tintas san juan, cartuchos y toners albardón, componentes de pc san juan, auriculares y monitores, reparación de tv san juan, arreglo de celulares albardón, servicio técnico computadoras, insumos informáticos"
     />
     <meta name="author" content="FA Insumos & Servicios" />
     <meta name="robots" content="index, follow" />
@@ -25,7 +25,7 @@
     />
     <meta
       property="og:description"
-      content="Soluciones tecnológicas integrales en Albardón, San Juan. Diagnóstico honesto y reparación de calidad garantizada."
+      content="Servicio técnico integral y gran catálogo de insumos de impresión y periféricos de PC en Albardón, San Juan."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.fainsumos.com.ar/" />
@@ -41,7 +41,6 @@
         "@type": "ComputerStore",
         "name": "FA Insumos & Servicios",
         "image": "https://www.fainsumos.com.ar/LOGO-FA.png",
-        "@id": "",
         "url": "https://www.fainsumos.com.ar/",
         "telephone": "+5492645674349",
         "address": {
@@ -70,58 +69,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
 
     <style>
-      /* ─── WHATSAPP FLOAT ─── */
-      .whatsapp-float {
-        position: fixed;
-        width: 60px;
-        height: 60px;
-        bottom: 30px;
-        right: 30px;
-        background-color: #25d366;
-        color: #fff;
-        border-radius: 50px;
-        text-align: center;
-        font-size: 30px;
-        box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition:
-          transform 0.3s ease,
-          box-shadow 0.3s ease;
-      }
-
-      .whatsapp-float:hover {
-        transform: scale(1.1) translateY(-5px);
-        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-        color: #fff;
-      }
-
-      @media (max-width: 600px) {
-        .whatsapp-float {
-          width: 50px;
-          height: 50px;
-          bottom: 20px;
-          right: 20px;
-        }
-      }
       :root {
+        /* Colores de Marca */
         --orange: #e8620a;
         --orange-light: #f4874a;
         --orange-dim: rgba(232, 98, 10, 0.12);
-        --dark: #0d0d0f;
-        --dark-2: #151518;
-        --dark-3: #1e1e24;
-        --dark-4: #2a2a32;
-        --white: #f7f5f2;
-        --white-dim: rgba(247, 245, 242, 0.6);
-        --white-faint: rgba(247, 245, 242, 0.08);
+
+        /* Paleta Oscura (Para Hero y Footer) */
+        --dark-bg: #0d0d0f;
+        --dark-surface: #151518;
+        --dark-surface-2: #1e1e24;
+        --text-on-dark: #f7f5f2;
+        --text-muted-on-dark: rgba(247, 245, 242, 0.7);
+
+        /* Paleta Clara (Para Cuerpo Comercial) */
+        --light-bg: #f8f9fa;
+        --light-surface: #ffffff;
+        --light-surface-2: #f1f3f5;
+        --border-light: #e9ecef;
+        --text-on-light: #212529;
+        --text-muted-on-light: #495057;
+
+        /* Sombras fluidas */
+        --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.04);
+        --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+        --shadow-hover: 0 20px 40px rgba(232, 98, 10, 0.12);
       }
 
       *,
@@ -134,103 +111,79 @@
 
       html {
         scroll-behavior: smooth;
+        /* Compensa el menú fijo al hacer scroll a los anclajes */
+        scroll-padding-top: 80px;
       }
 
       body {
-        background: var(--dark);
-        color: var(--white);
-        font-family: "DM Sans", sans-serif;
-        font-weight: 300;
+        background: var(--light-bg);
+        color: var(--text-on-light);
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
         line-height: 1.7;
         overflow-x: hidden;
       }
 
-      /* ─── NOISE TEXTURE ─── */
-      body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-        pointer-events: none;
-        z-index: 999;
-        opacity: 0.4;
-      }
-
-      /* ─── TYPOGRAPHY ─── */
       h1,
       h2,
       h3,
       h4 {
-        font-family: "Syne", sans-serif;
-        line-height: 1.1;
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.2;
+        color: inherit;
       }
 
       .label {
-        font-family: "Syne", sans-serif;
-        font-size: 0.68rem;
-        font-weight: 600;
-        letter-spacing: 0.18em;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
         text-transform: uppercase;
         color: var(--orange);
       }
 
-      /* ─── FADE-IN ANIMATION ─── */
+      /* Animaciones Mejoradas (Cubic Bezier para fluidez premium) */
       .reveal {
         opacity: 0;
-        transform: translateY(28px);
+        transform: translateY(40px);
         transition:
-          opacity 0.7s ease,
-          transform 0.7s ease;
+          opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .reveal.visible {
         opacity: 1;
-        transform: none;
+        transform: translateY(0);
       }
 
-      /* ══════════════════════════════════════════
-       HERO
-    ══════════════════════════════════════════ */
-      .hero {
-        min-height: 100vh;
-        display: grid;
-        grid-template-rows: auto 1fr auto;
-        padding: 0 6vw;
-        position: relative;
-        overflow: hidden;
-      }
-
-      /* big gradient orb */
-      .hero::after {
-        content: "";
-        position: absolute;
-        width: 700px;
-        height: 700px;
-        right: -120px;
-        top: -100px;
-        background: radial-gradient(
-          circle,
-          rgba(232, 98, 10, 0.18) 0%,
-          transparent 70%
-        );
-        border-radius: 50%;
-        pointer-events: none;
-      }
-
-      /* ── NAV ── */
+      /* ── NAV STICKY CON GLASSMORPHISM ── */
       nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 2.4rem 0;
-        border-bottom: 1px solid var(--white-faint);
-        position: relative;
-        z-index: 2;
+        padding: 1.5rem 6vw;
+        z-index: 1000;
+        transition: all 0.4s ease;
+        background: transparent;
+      }
+
+      nav.scrolled {
+        background: rgba(13, 13, 15, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        padding: 1rem 6vw;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
       }
 
       .nav-logo {
         display: flex;
         align-items: center;
         gap: 0.75rem;
+        color: var(--text-on-dark);
       }
 
       .nav-logo-mark {
@@ -248,36 +201,72 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-family: "Syne", sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-weight: 800;
         font-size: 0.8rem;
         color: #fff;
       }
 
       .nav-brand {
-        font-family: "Syne", sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-weight: 700;
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
       .nav-brand span {
         color: var(--orange);
       }
 
-      .nav-tagline {
-        font-size: 0.75rem;
-        color: var(--white-dim);
-        letter-spacing: 0.04em;
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+      .nav-links a {
+        color: var(--text-on-dark);
+        text-decoration: none;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: color 0.3s;
+      }
+      .nav-links a:hover {
+        color: var(--orange);
       }
 
-      /* ── HERO CONTENT ── */
-      .hero-content {
+      /* ── HERO OSCURO (Impacto visual limpio) ── */
+      .hero {
+        min-height: 100vh;
+        background: var(--dark-bg);
+        color: var(--text-on-dark);
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 6rem 0 4rem;
+        padding: 0 6vw;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Resplandor naranja de fondo */
+      .hero::after {
+        content: "";
+        position: absolute;
+        width: 700px;
+        height: 700px;
+        right: -100px;
+        top: -50px;
+        background: radial-gradient(
+          circle,
+          rgba(232, 98, 10, 0.15) 0%,
+          transparent 65%
+        );
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .hero-content {
         position: relative;
         z-index: 2;
-        max-width: 760px;
+        max-width: 800px;
+        margin-top: 80px; /* Compensa nav */
       }
 
       .hero-eyebrow {
@@ -286,33 +275,30 @@
         gap: 1rem;
         margin-bottom: 2rem;
       }
-
       .hero-eyebrow::after {
         content: "";
         flex: 1;
         max-width: 60px;
-        height: 1px;
+        height: 2px;
         background: var(--orange);
       }
 
-      /* Título optimizado para SEO Local */
       .hero-title {
-        font-size: clamp(3rem, 7vw, 6rem);
+        font-size: clamp(3rem, 6vw, 5.5rem);
         font-weight: 800;
-        line-height: 1;
+        line-height: 1.05;
         margin-bottom: 1.8rem;
-        letter-spacing: -0.02em;
+        letter-spacing: -0.03em;
       }
-
       .hero-title .accent {
         color: var(--orange);
       }
 
       .hero-subtitle {
-        font-size: 1.1rem;
-        color: var(--white-dim);
-        max-width: 520px;
-        line-height: 1.75;
+        font-size: 1.15rem;
+        color: var(--text-muted-on-dark);
+        max-width: 600px;
+        line-height: 1.7;
         margin-bottom: 3rem;
       }
 
@@ -326,82 +312,71 @@
         background: var(--orange);
         color: #fff;
         border: none;
-        padding: 0.9rem 2rem;
-        font-family: "Syne", sans-serif;
+        padding: 1rem 2.2rem;
+        font-family: "Montserrat", sans-serif;
         font-weight: 600;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         letter-spacing: 0.05em;
         cursor: pointer;
         text-decoration: none;
-        transition:
-          background 0.2s,
-          transform 0.2s;
-        clip-path: polygon(
-          0 0,
-          calc(100% - 12px) 0,
-          100% 12px,
-          100% 100%,
-          12px 100%,
-          0 calc(100% - 12px)
-        );
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        border-radius: 6px;
+        box-shadow: 0 4px 15px rgba(232, 98, 10, 0.3);
       }
       .btn-primary:hover {
         background: var(--orange-light);
-        transform: translateY(-2px);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(232, 98, 10, 0.4);
       }
 
       .btn-ghost {
-        background: transparent;
-        color: var(--white);
-        border: 1px solid rgba(247, 245, 242, 0.2);
-        padding: 0.9rem 2rem;
-        font-family: "Syne", sans-serif;
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text-on-dark);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 1rem 2.2rem;
+        font-family: "Montserrat", sans-serif;
         font-weight: 600;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         letter-spacing: 0.05em;
         cursor: pointer;
         text-decoration: none;
-        transition:
-          border-color 0.2s,
-          color 0.2s;
+        border-radius: 6px;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .btn-ghost:hover {
         border-color: var(--orange);
         color: var(--orange);
+        background: rgba(232, 98, 10, 0.05);
       }
 
-      /* ── HERO STATS ── */
       .hero-stats {
         display: flex;
-        gap: 3rem;
+        gap: 3.5rem;
         flex-wrap: wrap;
-        padding: 2.4rem 0;
-        border-top: 1px solid var(--white-faint);
+        margin-top: 5rem;
         position: relative;
         z-index: 2;
       }
-
       .stat-number {
-        font-family: "Syne", sans-serif;
-        font-size: 2rem;
+        font-family: "Montserrat", sans-serif;
+        font-size: 2.5rem;
         font-weight: 800;
         color: var(--orange);
         line-height: 1;
+        letter-spacing: -0.02em;
       }
       .stat-label {
-        font-size: 0.8rem;
-        color: var(--white-dim);
-        letter-spacing: 0.05em;
-        margin-top: 0.3rem;
+        font-size: 0.85rem;
+        color: var(--text-muted-on-dark);
+        letter-spacing: 0.02em;
+        margin-top: 0.5rem;
+        font-weight: 500;
       }
 
-      /* ══════════════════════════════════════════
-       SECTIONS GENERAL
-    ══════════════════════════════════════════ */
+      /* ── SECCIONES CLARAS ── */
       section {
         padding: 7rem 6vw;
       }
-
       .section-header {
         margin-bottom: 4rem;
       }
@@ -409,760 +384,475 @@
         font-size: clamp(2rem, 4vw, 3rem);
         font-weight: 800;
         margin-top: 0.6rem;
-        letter-spacing: -0.02em;
+        letter-spacing: -0.03em;
       }
 
-      /* ══════════════════════════════════════════
-       QUIÉNES SOMOS
-    ══════════════════════════════════════════ */
       #quienes {
-        background: var(--dark-2);
-        position: relative;
-        overflow: hidden;
+        background: var(--light-surface);
       }
-
-      #quienes::before {
-        content: "";
-        position: absolute;
-        left: -200px;
-        bottom: -200px;
-        width: 500px;
-        height: 500px;
-        background: radial-gradient(
-          circle,
-          rgba(232, 98, 10, 0.08) 0%,
-          transparent 70%
-        );
-        border-radius: 50%;
-        pointer-events: none;
-      }
-
       .quienes-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 5rem;
         align-items: start;
       }
-
       .quienes-text p {
-        color: var(--white-dim);
+        color: var(--text-muted-on-light);
         margin-bottom: 1.2rem;
-        font-size: 0.98rem;
+        font-size: 1.05rem;
       }
 
       .mvv-stack {
         display: flex;
         flex-direction: column;
-        gap: 1px;
+        gap: 1.5rem;
       }
-
       .mvv-card {
-        background: var(--dark-3);
-        border-left: 3px solid var(--orange);
-        padding: 1.6rem 2rem;
-        transition: background 0.2s;
+        background: var(--light-bg);
+        border-left: 4px solid var(--orange);
+        padding: 2rem;
+        border-radius: 0 8px 8px 0;
+        box-shadow: var(--shadow-sm);
+        transition: transform 0.3s ease;
       }
       .mvv-card:hover {
-        background: var(--dark-4);
+        transform: translateX(5px);
       }
-
       .mvv-card h4 {
-        font-size: 0.85rem;
+        font-size: 1rem;
         font-weight: 700;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.05em;
         text-transform: uppercase;
-        color: var(--orange);
-        margin-bottom: 0.6rem;
+        color: var(--text-on-light);
+        margin-bottom: 0.8rem;
       }
-
       .mvv-card p {
-        font-size: 0.92rem;
-        color: var(--white-dim);
-        line-height: 1.65;
+        font-size: 0.95rem;
+        color: var(--text-muted-on-light);
       }
 
       .valores-list {
         display: flex;
         flex-wrap: wrap;
         gap: 0.5rem;
-        margin-top: 0.8rem;
+        margin-top: 1rem;
       }
-
       .valor-tag {
-        background: var(--orange-dim);
-        color: var(--orange-light);
-        font-size: 0.78rem;
-        font-family: "Syne", sans-serif;
+        background: var(--light-surface);
+        color: var(--orange);
+        font-size: 0.8rem;
+        font-family: "Montserrat", sans-serif;
         font-weight: 600;
-        letter-spacing: 0.05em;
-        padding: 0.35rem 0.9rem;
-        border: 1px solid rgba(232, 98, 10, 0.25);
+        padding: 0.4rem 1rem;
+        border: 1px solid rgba(232, 98, 10, 0.2);
+        border-radius: 50px;
       }
 
-      /* ══════════════════════════════════════════
-       SERVICIOS
-    ══════════════════════════════════════════ */
       #servicios {
-        background: var(--dark);
+        background: var(--light-bg);
       }
-
       .servicios-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 1px;
-        background: var(--white-faint);
-        border: 1px solid var(--white-faint);
+        gap: 2rem;
       }
-
       .servicio-card {
-        background: var(--dark);
-        padding: 2.4rem 2rem;
+        background: var(--light-surface);
+        padding: 2.5rem;
+        border-radius: 12px;
+        box-shadow: var(--shadow-sm);
         position: relative;
-        transition: background 0.25s;
-        overflow: hidden;
+        transition:
+          transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+          box-shadow 0.4s ease;
+        border: 1px solid var(--border-light);
       }
-
-      .servicio-card::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background: var(--orange);
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.3s ease;
-      }
-
       .servicio-card:hover {
-        background: var(--dark-3);
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-hover);
+        border-color: rgba(232, 98, 10, 0.3);
       }
-      .servicio-card:hover::before {
-        transform: scaleX(1);
-      }
-
       .servicio-icon {
-        width: 44px;
-        height: 44px;
+        width: 56px;
+        height: 56px;
         background: var(--orange-dim);
-        border: 1px solid rgba(232, 98, 10, 0.3);
+        color: var(--orange);
+        border-radius: 12px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.3rem;
-        margin-bottom: 1.4rem;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        transition: transform 0.3s ease;
       }
-
+      .servicio-card:hover .servicio-icon {
+        transform: scale(1.1) rotate(-5deg);
+      }
       .servicio-card h3 {
-        font-size: 1rem;
+        font-size: 1.15rem;
         font-weight: 700;
-        margin-bottom: 0.8rem;
-        letter-spacing: -0.01em;
+        margin-bottom: 1rem;
+        color: var(--text-on-light);
       }
-
       .servicio-card p {
-        font-size: 0.88rem;
-        color: var(--white-dim);
-        line-height: 1.65;
+        font-size: 0.95rem;
+        color: var(--text-muted-on-light);
+        line-height: 1.6;
       }
 
-      /* ══════════════════════════════════════════
-       DETALLE TÉCNICO
-    ══════════════════════════════════════════ */
       #detalle {
-        background: var(--dark-2);
+        background: var(--light-surface);
       }
-
       .detalle-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
       }
-
       .detalle-category {
-        background: var(--dark-3);
-        padding: 2rem 2rem 2rem;
-        border-top: 2px solid var(--orange);
+        background: var(--light-bg);
+        padding: 2.5rem;
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+        border-top: 4px solid var(--orange);
       }
-
       .detalle-category h3 {
-        font-size: 0.95rem;
+        font-size: 1.05rem;
         font-weight: 700;
-        letter-spacing: 0.06em;
+        letter-spacing: 0.05em;
         text-transform: uppercase;
-        margin-bottom: 1.2rem;
+        margin-bottom: 1.5rem;
         display: flex;
         align-items: center;
-        gap: 0.6rem;
+        gap: 0.8rem;
       }
-
       .detalle-category ul {
         list-style: none;
       }
       .detalle-category li {
-        font-size: 0.88rem;
-        color: var(--white-dim);
-        padding: 0.45rem 0;
-        border-bottom: 1px solid var(--white-faint);
+        font-size: 0.95rem;
+        color: var(--text-muted-on-light);
+        padding: 0.7rem 0;
+        border-bottom: 1px solid var(--border-light);
         display: flex;
         align-items: center;
-        gap: 0.6rem;
+        gap: 0.8rem;
       }
       .detalle-category li:last-child {
         border-bottom: none;
       }
       .detalle-category li::before {
         content: "";
-        width: 4px;
-        height: 4px;
+        width: 8px;
+        height: 8px;
         background: var(--orange);
         border-radius: 50%;
         flex-shrink: 0;
       }
 
-      /* ══════════════════════════════════════════
-       CÓMO TRABAJAMOS
-    ══════════════════════════════════════════ */
       #proceso {
-        background: var(--dark);
+        background: var(--light-bg);
       }
-
       .proceso-steps {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 0;
+        gap: 2rem;
         position: relative;
       }
-
-      .proceso-steps::before {
-        content: "";
-        position: absolute;
-        top: 32px;
-        left: 12.5%;
-        right: 12.5%;
-        height: 1px;
-        background: linear-gradient(
-          90deg,
-          var(--orange) 0%,
-          rgba(232, 98, 10, 0.3) 100%
-        );
-      }
-
       .paso {
-        padding: 0 1.5rem 2rem;
+        background: var(--light-surface);
+        padding: 2.5rem 1.5rem;
         text-align: center;
+        border-radius: 12px;
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--border-light);
+        transition: transform 0.3s ease;
       }
-
+      .paso:hover {
+        transform: translateY(-5px);
+      }
       .paso-num {
         width: 64px;
         height: 64px;
-        border: 2px solid var(--orange);
-        background: var(--dark);
+        background: var(--orange-dim);
+        color: var(--orange);
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0 auto 1.5rem;
-        font-family: "Syne", sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-weight: 800;
-        font-size: 1.2rem;
-        color: var(--orange);
-        position: relative;
-        z-index: 1;
-        transition:
-          background 0.2s,
-          color 0.2s;
+        font-size: 1.3rem;
       }
-
-      .paso:hover .paso-num {
-        background: var(--orange);
-        color: #fff;
-      }
-
       .paso h3 {
-        font-size: 0.95rem;
-        font-weight: 700;
-        margin-bottom: 0.7rem;
-      }
-
-      .paso p {
-        font-size: 0.85rem;
-        color: var(--white-dim);
-        line-height: 1.65;
-      }
-
-      .compromiso-banner {
-        margin-top: 3.5rem;
-        background: linear-gradient(
-          135deg,
-          var(--dark-3) 0%,
-          var(--dark-4) 100%
-        );
-        border: 1px solid rgba(232, 98, 10, 0.3);
-        padding: 1.8rem 2.5rem;
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-      }
-
-      .compromiso-icon {
-        font-size: 2rem;
-        flex-shrink: 0;
-      }
-
-      .compromiso-banner p {
-        font-size: 0.93rem;
-        color: var(--white-dim);
-      }
-
-      .compromiso-banner strong {
-        color: var(--white);
-      }
-
-      /* ══════════════════════════════════════════
-       PROPUESTA DE VALOR
-    ══════════════════════════════════════════ */
-      #valor {
-        background: var(--dark-2);
-      }
-
-      .valor-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.5rem;
-      }
-
-      .valor-item {
-        padding: 2.2rem;
-        border: 1px solid var(--white-faint);
-        position: relative;
-        transition: border-color 0.25s;
-        overflow: hidden;
-      }
-
-      .valor-item:hover {
-        border-color: var(--orange);
-      }
-
-      .valor-item::after {
-        content: attr(data-num);
-        position: absolute;
-        right: 1.5rem;
-        top: 1.2rem;
-        font-family: "Syne", sans-serif;
-        font-size: 3.5rem;
-        font-weight: 800;
-        color: var(--white-faint);
-        line-height: 1;
-        pointer-events: none;
-      }
-
-      .valor-item h3 {
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-weight: 700;
         margin-bottom: 0.8rem;
       }
-
-      .valor-item p {
+      .paso p {
         font-size: 0.9rem;
-        color: var(--white-dim);
-        line-height: 1.7;
+        color: var(--text-muted-on-light);
       }
 
-      /* ══════════════════════════════════════════
-       POR QUÉ ELEGIRNOS
-    ══════════════════════════════════════════ */
       #elegir {
-        background: var(--dark);
+        background: var(--light-surface);
       }
-
       .elegir-cols {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 5rem;
         align-items: center;
       }
-
       .elegir-quote {
-        border-left: 3px solid var(--orange);
+        border-left: 4px solid var(--orange);
         padding-left: 2rem;
         margin-bottom: 3rem;
       }
-
       .elegir-quote blockquote {
-        font-family: "Syne", sans-serif;
-        font-size: 1.3rem;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.4rem;
         font-weight: 600;
         line-height: 1.4;
-        color: var(--white);
+        color: var(--text-on-light);
         font-style: italic;
       }
-
       .elegir-text p {
-        color: var(--white-dim);
-        font-size: 0.95rem;
-        line-height: 1.75;
+        color: var(--text-muted-on-light);
+        font-size: 1.05rem;
       }
-
       .razones {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
       }
-
       .razon {
-        background: var(--dark-3);
-        padding: 1.6rem 2rem;
+        background: var(--light-bg);
+        padding: 1.8rem;
         display: flex;
-        gap: 1.2rem;
+        gap: 1.5rem;
         align-items: flex-start;
-        transition: background 0.2s;
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+        transition: box-shadow 0.3s ease;
       }
       .razon:hover {
-        background: var(--dark-4);
+        box-shadow: var(--shadow-md);
       }
-
       .razon-icon {
-        width: 40px;
-        height: 40px;
-        background: var(--orange-dim);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
-        flex-shrink: 0;
-      }
-
-      .razon-body h4 {
-        font-size: 0.92rem;
-        font-weight: 700;
-        margin-bottom: 0.3rem;
-      }
-
-      .razon-body p {
-        font-size: 0.86rem;
-        color: var(--white-dim);
-        line-height: 1.6;
-      }
-
-      /* ══════════════════════════════════════════
-       PROCESO ATENCIÓN
-    ══════════════════════════════════════════ */
-      #atencion {
-        background: var(--dark-2);
-      }
-
-      .atencion-flow {
-        display: flex;
-        gap: 0;
-        margin-bottom: 3rem;
-        overflow-x: auto;
-      }
-
-      .flow-step {
-        flex: 1;
-        min-width: 140px;
-        text-align: center;
-        padding: 0 1rem;
-        position: relative;
-      }
-
-      .flow-step:not(:last-child)::after {
-        content: "→";
-        position: absolute;
-        right: -10px;
-        top: 24px;
-        color: var(--orange);
-        font-size: 1.2rem;
-        z-index: 2;
-      }
-
-      .flow-circle {
-        width: 52px;
-        height: 52px;
+        width: 50px;
+        height: 50px;
         background: var(--orange);
-        border-radius: 50%;
-        margin: 0 auto 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.3rem;
-      }
-
-      .flow-step h4 {
-        font-size: 0.85rem;
-        font-weight: 700;
-        letter-spacing: 0.04em;
-      }
-
-      .equipo-list {
-        background: var(--dark-3);
-        padding: 2rem 2.5rem;
-        border-left: 3px solid var(--orange);
-      }
-
-      .equipo-list h4 {
-        font-size: 0.9rem;
-        font-weight: 700;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        color: var(--orange);
-        margin-bottom: 1rem;
-      }
-
-      .equipo-list ul {
-        list-style: none;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.4rem 0.5rem;
-      }
-      .equipo-list li {
-        font-size: 0.88rem;
-        color: var(--white-dim);
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-      .equipo-list li::before {
-        content: "✓";
-        color: var(--orange);
-        font-weight: 700;
-        font-size: 0.8rem;
-      }
-
-      /* ══════════════════════════════════════════
-       CONTACTO
-    ══════════════════════════════════════════ */
-      #contacto {
-        background: var(--dark);
-        position: relative;
-        overflow: hidden;
-      }
-
-      #contacto::before {
-        content: "";
-        position: absolute;
-        right: -150px;
-        bottom: -150px;
-        width: 500px;
-        height: 500px;
-        background: radial-gradient(
-          circle,
-          rgba(232, 98, 10, 0.1) 0%,
-          transparent 65%
-        );
-        border-radius: 50%;
-        pointer-events: none;
-      }
-
-      .contacto-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1px;
-        background: var(--white-faint);
-        border: 1px solid var(--white-faint);
-        margin-bottom: 2.5rem;
-      }
-
-      .contacto-card {
-        background: var(--dark);
-        padding: 2.4rem 2rem;
-        transition: background 0.2s;
-      }
-      .contacto-card:hover {
-        background: var(--dark-3);
-      }
-
-      .contacto-card .icon {
-        width: 48px;
-        height: 48px;
-        background: var(--orange-dim);
-        border: 1px solid rgba(232, 98, 10, 0.3);
+        color: #fff;
+        border-radius: 12px;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 1.4rem;
-        margin-bottom: 1.2rem;
+        flex-shrink: 0;
+      }
+      .razon-body h4 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+      }
+      .razon-body p {
+        font-size: 0.95rem;
+        color: var(--text-muted-on-light);
       }
 
+      /* ── FOOTER OSCURO ── */
+      #contacto {
+        background: var(--dark-bg);
+        color: var(--text-on-dark);
+        position: relative;
+        overflow: hidden;
+      }
+      #contacto .section-header h2 {
+        color: var(--text-on-dark);
+      }
+      .contacto-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-bottom: 2.5rem;
+      }
+      .contacto-card {
+        background: var(--dark-surface);
+        padding: 2.5rem 2rem;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: transform 0.3s ease;
+      }
+      .contacto-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(232, 98, 10, 0.3);
+      }
+      .contacto-card .icon {
+        width: 56px;
+        height: 56px;
+        background: var(--orange-dim);
+        color: var(--orange);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+      }
       .contacto-card h4 {
-        font-size: 0.8rem;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.85rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: var(--orange);
-        margin-bottom: 0.6rem;
-        font-weight: 600;
-      }
-
-      .contacto-card .value {
-        font-family: "Syne", sans-serif;
+        margin-bottom: 0.8rem;
         font-weight: 700;
-        font-size: 1.05rem;
-        margin-bottom: 0.5rem;
       }
-
+      .contacto-card .value {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 1.15rem;
+        margin-bottom: 0.6rem;
+      }
       .contacto-card p {
-        font-size: 0.86rem;
-        color: var(--white-dim);
-        line-height: 1.65;
+        font-size: 0.95rem;
+        color: var(--text-muted-on-dark);
       }
 
-      .diagnostico-promo {
-        background: linear-gradient(
-          135deg,
-          rgba(232, 98, 10, 0.15) 0%,
-          transparent 60%
-        );
-        border: 1px solid rgba(232, 98, 10, 0.4);
-        padding: 2rem 2.5rem;
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-      }
-
-      .diagnostico-promo strong {
-        color: var(--orange);
-      }
-      .diagnostico-promo p {
-        font-size: 0.92rem;
-        color: var(--white-dim);
-        line-height: 1.6;
-      }
-
-      /* ── FOOTER ── */
       footer {
         padding: 2.5rem 6vw;
-        border-top: 1px solid var(--white-faint);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 1rem;
+        background: var(--dark-bg);
+        color: var(--text-on-dark);
       }
-
       footer .footer-brand {
-        font-family: "Syne", sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-weight: 700;
-        font-size: 0.95rem;
+        font-size: 1.05rem;
       }
       footer .footer-brand span {
         color: var(--orange);
       }
-
       footer p {
-        font-size: 0.8rem;
-        color: var(--white-dim);
+        font-size: 0.9rem;
+        color: var(--text-muted-on-dark);
       }
 
-      /* ─── RESPONSIVE ─── */
+      /* ── RESPONSIVE ── */
       @media (max-width: 900px) {
         .quienes-grid,
         .elegir-cols,
-        .detalle-grid,
-        .valor-grid {
+        .detalle-grid {
           grid-template-columns: 1fr;
-          gap: 2.5rem;
+          gap: 3rem;
         }
-        .servicios-grid {
-          grid-template-columns: 1fr 1fr;
-        }
+        .servicios-grid,
         .proceso-steps {
           grid-template-columns: 1fr 1fr;
-          gap: 2rem;
-        }
-        .proceso-steps::before {
-          display: none;
         }
         .contacto-grid {
           grid-template-columns: 1fr;
         }
-        .equipo-list ul {
-          grid-template-columns: 1fr;
+        .nav-links {
+          display: none;
         }
       }
-
       @media (max-width: 600px) {
-        .servicios-grid {
-          grid-template-columns: 1fr;
-        }
+        .servicios-grid,
         .proceso-steps {
           grid-template-columns: 1fr;
         }
         .hero-title {
-          font-size: 2.6rem;
+          font-size: 2.8rem;
         }
         section {
-          padding: 4.5rem 5vw;
+          padding: 5rem 5vw;
         }
         .hero {
           padding: 0 5vw;
         }
-        nav {
-          padding: 1.5rem 0;
-        }
       }
 
-      /* ─── SCROLL INDICATOR ─── */
-      .scroll-line {
+      /* ── BOTÓN WHATSAPP FLOTANTE ── */
+      .whatsapp-float {
         position: fixed;
-        top: 0;
-        left: 0;
-        height: 2px;
-        background: var(--orange);
+        width: 60px;
+        height: 60px;
+        bottom: 30px;
+        right: 30px;
+        background-color: #25d366;
+        color: #fff;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
         z-index: 1000;
-        transition: width 0.1s linear;
+        transition:
+          transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+          box-shadow 0.3s ease;
+      }
+      .whatsapp-float:hover {
+        transform: scale(1.15) translateY(-5px);
+        box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
+      }
+      @media (max-width: 600px) {
+        .whatsapp-float {
+          width: 50px;
+          height: 50px;
+          bottom: 20px;
+          right: 20px;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="scroll-line" id="scrollLine"></div>
+    <nav id="navbar">
+      <div class="nav-logo">
+        <div class="nav-logo-mark">FA</div>
+        <div class="nav-brand">FA <span>Insumos</span></div>
+      </div>
+      <div class="nav-links">
+        <a href="#quienes">Empresa</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </nav>
 
     <header class="hero">
-      <nav>
-        <div class="nav-logo">
-          <div class="nav-logo-mark">FA</div>
-          <div>
-            <div class="nav-brand">FA <span>Insumos & Servicios</span></div>
-          </div>
-        </div>
-        <div class="nav-tagline">
-          Tecnología e Innovación · San Juan, Argentina
-        </div>
-      </nav>
-
       <div class="hero-content reveal">
         <div class="hero-eyebrow">
-          <span class="label">Presentación Corporativa</span>
+          <span class="label">Soluciones Tecnológicas</span>
         </div>
         <h1 class="hero-title">
           Servicio Técnico<br />
-          de <span class="accent">Computadoras</span><br />
-          y Celulares
+          y Venta de <span class="accent">Insumos</span>
         </h1>
         <p class="hero-subtitle">
-          Tu socio tecnológico de confianza en cada etapa del ciclo de vida de
-          tus equipos. Diagnóstico honesto, reparación de calidad y soporte
-          continuo para empresas y particulares.
+          Tu socio tecnológico en San Juan. Especialistas en reparación de
+          celulares, impresoras, TV y PC. Además, contamos con un amplio
+          catálogo en insumos de impresión y periféricos.
         </p>
         <div class="hero-cta">
-          <a href="#contacto" class="btn-primary">Solicitar Diagnóstico</a>
-          <a href="#servicios" class="btn-ghost">Ver Servicios</a>
+          <a href="#servicios" class="btn-primary">Ver Catálogo y Servicios</a>
+          <a href="#contacto" class="btn-ghost">Contactar por WhatsApp</a>
         </div>
       </div>
 
       <div class="hero-stats reveal">
         <div class="stat-item">
           <div class="stat-number">6+</div>
-          <div class="stat-label">Áreas de Servicio</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">4</div>
-          <div class="stat-label">Etapas de Control de Calidad</div>
+          <div class="stat-label">Áreas de Especialidad</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">100%</div>
-          <div class="stat-label">Garantía en Reparaciones</div>
+          <div class="stat-label">Repuestos de Calidad</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">0</div>
@@ -1179,50 +869,35 @@
       <div class="quienes-grid">
         <div class="quienes-text reveal">
           <p>
-            FA Insumos & Servicios es una empresa especializada en soluciones
-            tecnológicas integrales, orientada a brindar servicios de
-            diagnóstico, reparación, optimización y provisión de equipamiento
-            informático y electrónico a empresas y usuarios particulares que
-            demandan resultados profesionales y fiables.
+            FA Insumos & Servicios es una empresa especializada en brindar un
+            ecosistema tecnológico completo. No solo diagnosticamos y reparamos
+            equipos, sino que también proveemos todos los insumos, componentes y
+            hardware necesarios para que empresas y particulares rindan al
+            máximo.
           </p>
           <p>
-            Nacemos con la convicción de que la tecnología debe ser un aliado
-            estratégico para nuestros clientes, no una fuente de interrupciones
-            ni costes imprevistos. Cada intervención técnica está respaldada por
-            un equipo altamente cualificado, herramientas de diagnóstico
-            avanzadas y componentes certificados.
-          </p>
-          <p>
-            Trabajamos con empresas de todos los tamaños y con usuarios
-            domésticos, adaptando nuestras soluciones a las necesidades
-            específicas de cada caso. Flexibilidad, transparencia y excelencia
-            técnica son los pilares de cada relación comercial.
+            Ya sea que necesites arreglar un monitor, comprar botellas de tinta
+            para tu impresora, o armar una PC con los últimos periféricos, te
+            ofrecemos calidad garantizada y asesoramiento honesto en un solo
+            lugar.
           </p>
         </div>
         <div class="mvv-stack reveal">
           <div class="mvv-card">
-            <h4>Nuestra Misión</h4>
+            <h4>Solución Integral</h4>
             <p>
-              Ser el aliado tecnológico más confiable, ofreciendo soluciones
-              integrales que protejan la inversión tecnológica y maximicen el
-              rendimiento operativo de cada cliente.
-            </p>
-          </div>
-          <div class="mvv-card">
-            <h4>Nuestra Visión</h4>
-            <p>
-              Convertirnos en referencia regional en servicios técnicos de
-              calidad, reconocidos por la excelencia, la honestidad y el
-              compromiso con la innovación continua.
+              Reparación y comercialización unificadas. Simplificamos tu vida
+              tecnológica proveyendo tanto el servicio técnico experto como los
+              productos y accesorios de alta calidad que tu equipo necesita.
             </p>
           </div>
           <div class="mvv-card">
             <h4>Nuestros Valores</h4>
             <div class="valores-list">
               <span class="valor-tag">Transparencia</span>
-              <span class="valor-tag">Excelencia Técnica</span>
-              <span class="valor-tag">Compromiso</span>
-              <span class="valor-tag">Innovación</span>
+              <span class="valor-tag">Calidad Garantizada</span>
+              <span class="valor-tag">Respuesta Rápida</span>
+              <span class="valor-tag">Atención Personalizada</span>
             </div>
           </div>
         </div>
@@ -1231,63 +906,56 @@
 
     <section id="servicios">
       <div class="section-header reveal">
-        <span class="label">Catálogo Completo</span>
-        <h2>Nuestros Servicios</h2>
+        <span class="label">Catálogo y Soporte</span>
+        <h2>Todo lo que Necesitas</h2>
       </div>
       <div class="servicios-grid reveal">
         <div class="servicio-card">
           <div class="servicio-icon">🖥️</div>
-          <h3>Reparación de Ordenadores y Portátiles</h3>
+          <h3>PC y Notebooks</h3>
           <p>
-            Diagnóstico y reparación profesional de ordenadores de sobremesa,
-            portátiles y netbooks de todas las marcas. Sustitución de
-            componentes, recuperación de datos y optimización de rendimiento.
-          </p>
-        </div>
-        <div class="servicio-card">
-          <div class="servicio-icon">🖨️</div>
-          <h3>Impresoras y Periféricos</h3>
-          <p>
-            Mantenimiento preventivo y correctivo de impresoras de inyección,
-            láser y matriciales. Reparación de monitores, escáneres y
-            periféricos de oficina para mantener tu flujo de trabajo sin
-            interrupciones.
-          </p>
-        </div>
-        <div class="servicio-card">
-          <div class="servicio-icon">📺</div>
-          <h3>Electrónica de Consumo</h3>
-          <p>
-            Servicio técnico especializado en televisores, monitores de alta
-            resolución y consolas de videojuegos. Reparaciones con garantía y
-            piezas certificadas para los principales fabricantes.
+            Diagnóstico profesional, cambio de componentes, limpieza interna,
+            cambio de pasta térmica y recuperación de datos.
           </p>
         </div>
         <div class="servicio-card">
           <div class="servicio-icon">📱</div>
-          <h3>Dispositivos Móviles</h3>
+          <h3>Celulares y Tablets</h3>
           <p>
-            Reparación y mantenimiento de smartphones y tabletas. Cambio de
-            pantallas, baterías, conectores y diagnóstico de software en los
-            principales sistemas operativos del mercado.
+            Reemplazo de pantallas, módulos, cambio de baterías, reparación de
+            pines de carga y problemas de software.
           </p>
         </div>
         <div class="servicio-card">
-          <div class="servicio-icon">💾</div>
-          <h3>Insumos y Hardware</h3>
+          <div class="servicio-icon">📺</div>
+          <h3>TV, Monitores y Audio</h3>
           <p>
-            Venta de insumos informáticos, componentes de hardware y accesorios.
-            Asesoramiento personalizado para la adquisición de equipamiento
-            adecuado a cada presupuesto y necesidad operativa.
+            Arreglo especializado de televisores, pantallas de PC y monitores.
+            Servicio técnico de parlantes con garantía.
           </p>
         </div>
         <div class="servicio-card">
-          <div class="servicio-icon">📡</div>
-          <h3>Redes y Conectividad</h3>
+          <div class="servicio-icon">⚙️</div>
+          <h3>Soporte de Impresoras</h3>
           <p>
-            Instalación y configuración de software empresarial, redes locales,
-            Wi-Fi corporativo y soluciones de conectividad segura. Diseño e
-            implementación de infraestructura de red escalable.
+            Mantenimiento preventivo, destapado de cabezales y servicio
+            correctivo para impresoras de inyección y láser.
+          </p>
+        </div>
+        <div class="servicio-card">
+          <div class="servicio-icon">🖨️</div>
+          <h3>Insumos de Impresión</h3>
+          <p>
+            Venta de tintas originales y alternativas, tóners, cartuchos y
+            resmas de papeles. Insumos para todas las marcas.
+          </p>
+        </div>
+        <div class="servicio-card">
+          <div class="servicio-icon">🖱️</div>
+          <h3>Hardware y Accesorios</h3>
+          <p>
+            Venta de periféricos (teclados, mouses), monitores, parlantes y
+            componentes internos de PC (memorias, discos).
           </p>
         </div>
       </div>
@@ -1295,49 +963,44 @@
 
     <section id="detalle">
       <div class="section-header reveal">
-        <span class="label">Capacidades</span>
-        <h2>Detalle de Servicios Técnicos</h2>
+        <span class="label">Especialidades</span>
+        <h2>Detalle de Servicios y Ventas</h2>
       </div>
       <div class="detalle-grid">
         <div class="detalle-category reveal">
-          <h3>🖥️ Informática y Ordenadores</h3>
+          <h3>🔧 Reparaciones Informáticas</h3>
           <ul>
-            <li>Cambio de pasta térmica y limpieza profunda</li>
-            <li>Sustitución de discos duros por SSD</li>
-            <li>Ampliación y actualización de memoria RAM</li>
-            <li>Recuperación de datos y copias de seguridad</li>
-            <li>Reinstalación y actualización de sistemas operativos</li>
-            <li>Eliminación de virus y malware</li>
-            <li>Reparación de tarjetas madre y fuentes de alimentación</li>
+            <li>Formateo y optimización de computadoras</li>
+            <li>Cambio de discos HDD a discos sólidos (SSD)</li>
+            <li>Sustitución de módulos y pantallas de celulares</li>
+            <li>Cambio de conectores y baterías de smartphones</li>
           </ul>
         </div>
         <div class="detalle-category reveal">
-          <h3>🖨️ Impresoras y Equipos de Oficina</h3>
+          <h3>📺 Electrónica y Audio</h3>
           <ul>
-            <li>Limpieza y mantenimiento preventivo de cabezales</li>
-            <li>Reparación de sistemas de alimentación de papel</li>
-            <li>Recarga y sustitución de cartuchos y tóner</li>
-            <li>Reparación de impresoras multifunción</li>
-            <li>Configuración en red y acceso compartido</li>
+            <li>Reparación de televisores y Smart TVs</li>
+            <li>Servicio técnico de monitores de computadora</li>
+            <li>Arreglo de parlantes y sistemas de sonido</li>
+            <li>Diagnóstico de fallas eléctricas y fuentes</li>
           </ul>
         </div>
         <div class="detalle-category reveal">
-          <h3>📱 Dispositivos Móviles</h3>
+          <h3>🖨️ Insumos de Impresión</h3>
           <ul>
-            <li>Cambio de pantalla y cristal táctil</li>
-            <li>Sustitución de batería y conectores de carga</li>
-            <li>Reparación de cámara y altavoces</li>
-            <li>Diagnóstico y restauración de software</li>
+            <li>Botellas de tinta para sistemas continuos</li>
+            <li>Tóners para impresoras láser y cartuchos</li>
+            <li>Resmas de papel (A4, Oficio, Fotográfico)</li>
+            <li>Mantenimiento y venta en un solo lugar</li>
           </ul>
         </div>
         <div class="detalle-category reveal">
-          <h3>📡 Redes y Software</h3>
+          <h3>🛒 Hardware y Periféricos</h3>
           <ul>
-            <li>Diseño de redes LAN y WLAN corporativas</li>
-            <li>Configuración de routers, switches y puntos de acceso</li>
-            <li>Instalación de antivirus y software de seguridad</li>
-            <li>Configuración de VPN y acceso remoto seguro</li>
-            <li>Soporte en sistemas operativos Windows y Linux</li>
+            <li>Periféricos: teclados, mouses y auriculares</li>
+            <li>Componentes: Memorias RAM, discos, fuentes</li>
+            <li>Venta de Monitores de alta resolución y parlantes</li>
+            <li>Asesoramiento para armar tu computadora ideal</li>
           </ul>
         </div>
       </div>
@@ -1350,200 +1013,44 @@
       </div>
       <div class="proceso-steps reveal">
         <div class="paso">
-          <div class="paso-num">01</div>
-          <h3>Diagnóstico Profesional</h3>
+          <div class="paso-num">1</div>
+          <h3>Contacto Rápido</h3>
           <p>
-            Análisis técnico preciso del equipo o sistema afectado. El coste del
-            diagnóstico es deducible del presupuesto final si el cliente decide
-            continuar.
+            Escribinos por WhatsApp para consultar precios de insumos o pedir
+            turno técnico.
           </p>
         </div>
         <div class="paso">
-          <div class="paso-num">02</div>
-          <h3>Presupuesto Transparente</h3>
+          <div class="paso-num">2</div>
+          <h3>Presupuesto Claro</h3>
           <p>
-            Propuesta detallada con desglose de materiales, mano de obra y
-            tiempos estimados. Sin sorpresas ni costos ocultos. El cliente
-            aprueba antes de comenzar.
+            Te brindamos un presupuesto transparente para reparaciones o lista
+            de precios.
           </p>
         </div>
         <div class="paso">
-          <div class="paso-num">03</div>
-          <h3>Reparación con Control de Calidad</h3>
+          <div class="paso-num">3</div>
+          <h3>Gestión Ágil</h3>
           <p>
-            Utilizamos componentes certificados y realizamos testeos rigurosos
-            en cada etapa. Cada reparación pasa por un protocolo de verificación
-            antes de ser entregada.
+            Preparamos tu pedido para retiro o ingresamos tu equipo al taller
+            especializado.
           </p>
         </div>
         <div class="paso">
-          <div class="paso-num">04</div>
-          <h3>Validación y Soporte Post-servicio</h3>
+          <div class="paso-num">4</div>
+          <h3>Entrega y Garantía</h3>
           <p>
-            Acompañamos al cliente con soporte técnico posterior a la entrega.
-            Garantizamos nuestros trabajos y estamos disponibles para resolver
-            cualquier incidencia.
+            Entregamos tus insumos o equipo reparado con total garantía de
+            funcionamiento.
           </p>
         </div>
-      </div>
-      <div class="compromiso-banner reveal">
-        <div class="compromiso-icon">💡</div>
-        <p>
-          <strong>Compromiso de calidad:</strong> Todos nuestros trabajos
-          incluyen garantía sobre la reparación realizada. Los componentes
-          utilizados son originales o de primera calidad certificada,
-          seleccionados específicamente para cada modelo y fabricante.
-        </p>
-      </div>
-    </section>
-
-    <section id="valor">
-      <div class="section-header reveal">
-        <span class="label">Diferencial Competitivo</span>
-        <h2>Nuestra Propuesta de Valor</h2>
-      </div>
-      <div class="valor-grid">
-        <div class="valor-item reveal" data-num="01">
-          <h3>🔧 Experiencia Técnica Especializada</h3>
-          <p>
-            Formación técnica continua y experiencia práctica en una amplia gama
-            de marcas, modelos y tecnologías. No improvisamos: cada diagnóstico
-            y reparación sigue protocolos validados por la industria.
-          </p>
-        </div>
-        <div class="valor-item reveal" data-num="02">
-          <h3>💎 Transparencia Total en el Proceso</h3>
-          <p>
-            Desde el primer diagnóstico hasta la entrega final, el cliente tiene
-            visibilidad completa sobre lo que se hace, por qué se hace y cuánto
-            cuesta. La confianza es la base de cada relación comercial.
-          </p>
-        </div>
-        <div class="valor-item reveal" data-num="03">
-          <h3>⚡ Tiempos de Respuesta Ágiles</h3>
-          <p>
-            Entendemos que cada hora sin equipo operativo es una pérdida real.
-            Optimizamos nuestros procesos internos para reducir los tiempos de
-            diagnóstico y reparación al mínimo posible, sin comprometer la
-            calidad.
-          </p>
-        </div>
-        <div class="valor-item reveal" data-num="04">
-          <h3>🤝 Soporte y Acompañamiento Continuo</h3>
-          <p>
-            La relación con nuestros clientes no termina con la entrega del
-            equipo. Ofrecemos soporte post-servicio, asesoramiento tecnológico y
-            mantenimiento preventivo para garantizar el óptimo funcionamiento a
-            largo plazo.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="elegir">
-      <div class="section-header reveal">
-        <span class="label">Ventajas Clave</span>
-        <h2>Por Qué Elegirnos</h2>
-      </div>
-      <div class="elegir-cols">
-        <div class="elegir-text reveal">
-          <div class="elegir-quote">
-            <blockquote>
-              "La tecnología no debería ser un problema, sino una ventaja
-              competitiva. En FA Insumos & Servicios, nos aseguramos de que así
-              sea para cada uno de nuestros clientes."
-            </blockquote>
-          </div>
-          <p>
-            Nuestra filosofía de trabajo se basa en construir relaciones
-            comerciales duraderas fundamentadas en la confianza mutua. No
-            buscamos únicamente completar una reparación; buscamos convertirnos
-            en el referente tecnológico al que nuestros clientes acuden cada vez
-            que lo necesitan. Esta mentalidad de largo plazo se refleja en cada
-            interacción, desde la primera llamada hasta el soporte
-            post-servicio.
-          </p>
-        </div>
-        <div class="razones reveal">
-          <div class="razon">
-            <div class="razon-icon">🏆</div>
-            <div class="razon-body">
-              <h4>Servicio Integral</h4>
-              <p>
-                Un único proveedor para todas tus necesidades tecnológicas:
-                reparación, mantenimiento, insumos, redes y software.
-                Simplificamos la gestión tecnológica de tu empresa.
-              </p>
-            </div>
-          </div>
-          <div class="razon">
-            <div class="razon-icon">🔍</div>
-            <div class="razon-body">
-              <h4>Diagnóstico Honesto</h4>
-              <p>
-                Te decimos exactamente qué tiene tu equipo y qué necesita, sin
-                diagnósticos inflados ni reparaciones innecesarias. La
-                honestidad técnica es nuestra política.
-              </p>
-            </div>
-          </div>
-          <div class="razon">
-            <div class="razon-icon">🛡️</div>
-            <div class="razon-body">
-              <h4>Garantía en Reparaciones</h4>
-              <p>
-                Todos nuestros trabajos incluyen garantía. Si algo no funciona
-                como esperabas después de la reparación, lo resolvemos sin costo
-                adicional.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="atencion">
-      <div class="section-header reveal">
-        <span class="label">Flujo de Atención</span>
-        <h2>Proceso de Atención al Cliente</h2>
-      </div>
-      <div class="atencion-flow reveal">
-        <div class="flow-step">
-          <div class="flow-circle">📞</div>
-          <h4>Contacto</h4>
-        </div>
-        <div class="flow-step">
-          <div class="flow-circle">📥</div>
-          <h4>Recepción</h4>
-        </div>
-        <div class="flow-step">
-          <div class="flow-circle">📋</div>
-          <h4>Presupuesto</h4>
-        </div>
-        <div class="flow-step">
-          <div class="flow-circle">🔧</div>
-          <h4>Reparación</h4>
-        </div>
-        <div class="flow-step">
-          <div class="flow-circle">📦</div>
-          <h4>Entrega</h4>
-        </div>
-      </div>
-      <div class="equipo-list reveal">
-        <h4>📋 ¿Qué necesitas para traer tu equipo?</h4>
-        <ul>
-          <li>El equipo o dispositivo a reparar</li>
-          <li>Cables y accesorios relevantes</li>
-          <li>Descripción del problema o síntoma</li>
-          <li>Tus datos de contacto para el seguimiento</li>
-        </ul>
       </div>
     </section>
 
     <section id="contacto">
       <div class="section-header reveal">
         <span class="label">Contacto Directo</span>
-        <h2>Estamos Aquí Para Ayudarte</h2>
+        <h2>Hacé tu pedido o consulta</h2>
       </div>
       <div class="contacto-grid reveal">
         <div class="contacto-card">
@@ -1551,9 +1058,8 @@
           <h4>Nuestra Ubicación</h4>
           <div class="value">Albardón, San Juan</div>
           <p>
-            Ignacio de la Rosa 110, Villa San Martín. Atendemos de lunes a
-            viernes en horario comercial. Visítanos para una atención
-            personalizada.
+            Ignacio de la Rosa 110, Villa San Martín. Pasá a buscar tus insumos
+            o dejá tu equipo.
           </p>
         </div>
         <div class="contacto-card">
@@ -1561,8 +1067,8 @@
           <h4>Teléfono / WhatsApp</h4>
           <div class="value">+54 9 2645 674 349</div>
           <p>
-            Llámanos o escríbenos por WhatsApp para una respuesta rápida.
-            Atendemos consultas técnicas, presupuestos y coordinación de turnos.
+            Contactanos para consultar precios de tintas, stock o solicitar
+            turno de servicio técnico.
           </p>
         </div>
         <div class="contacto-card">
@@ -1572,33 +1078,22 @@
             fa.insumosyservicios@gmail.com
           </div>
           <p>
-            Envíanos un correo con la descripción de tu problema y te
-            responderemos en el menor tiempo posible con una propuesta
-            personalizada.
+            Ideal para cotizaciones corporativas o provisión de insumos para
+            oficinas.
           </p>
         </div>
-      </div>
-      <div class="diagnostico-promo reveal">
-        <div style="font-size: 1.8rem; flex-shrink: 0">🔖</div>
-        <p>
-          <strong>¿Primera vez con nosotros?</strong> Solicita tu diagnóstico
-          inicial y obtén asesoramiento técnico personalizado. El costo del
-          diagnóstico es
-          <strong>deducible del presupuesto de reparación</strong> si decides
-          continuar con el servicio. ¡Sin compromisos!
-        </p>
       </div>
     </section>
 
     <footer>
       <div class="footer-brand">FA <span>Insumos & Servicios</span></div>
-      <p>Diagnóstico honesto · Reparación de calidad · Soporte continuo</p>
+      <p>Venta de insumos · Reparación de calidad · Soluciones IT integrales</p>
       <p
         style="
           color: var(--orange);
-          font-family: &quot;Syne&quot;, sans-serif;
-          font-size: 0.8rem;
-          font-weight: 600;
+          font-family: &quot;Montserrat&quot;, sans-serif;
+          font-size: 0.85rem;
+          font-weight: 700;
         "
       >
         San Juan, Argentina
@@ -1606,37 +1101,43 @@
     </footer>
 
     <script>
-      // ── Scroll progress bar
+      // ── Navbar Sticky Effect ──
+      const navbar = document.getElementById("navbar");
       window.addEventListener("scroll", () => {
-        const scrolled =
-          (window.scrollY /
-            (document.documentElement.scrollHeight - window.innerHeight)) *
-          100;
-        document.getElementById("scrollLine").style.width = scrolled + "%";
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
       });
 
-      // ── Reveal on scroll
+      // ── Reveal on scroll avanzado ──
       const reveals = document.querySelectorAll(".reveal");
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry, i) => {
             if (entry.isIntersecting) {
-              setTimeout(() => entry.target.classList.add("visible"), i * 80);
+              // Staggering effect basado en el índice
+              setTimeout(
+                () => entry.target.classList.add("visible"),
+                (i % 4) * 100,
+              );
             }
           });
         },
-        { threshold: 0.1 },
+        { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
       );
 
       reveals.forEach((el) => observer.observe(el));
 
-      // Trigger hero reveals immediately
+      // Trigger hero reveals inmediatamente con un pequeño retraso en cascada
       document.querySelectorAll(".hero .reveal").forEach((el, i) => {
-        setTimeout(() => el.classList.add("visible"), 300 + i * 200);
+        setTimeout(() => el.classList.add("visible"), 200 + i * 150);
       });
     </script>
+
     <a
-      href="https://wa.me/5492645674349?text=Hola%20FA%20Insumos%20%26%20Servicios,%20quiero%20hacer%20una%20consulta%20técnica."
+      href="https://wa.me/5492645674349?text=Hola%20FA%20Insumos%20%26%20Servicios,%20quiero%20hacer%20una%20consulta%20por%20reparación%20o%20stock%20de%20insumos."
       class="whatsapp-float"
       target="_blank"
       rel="noopener noreferrer"
